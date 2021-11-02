@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+
+            if(true){
+                callbackSucesso('Funções de callback em JS',
+                'Funções de callback são muito utilizadas ...',
+                'azul escuro com amarelo',
+                'Minha teta branca',(9+(3/2)*5))
+
+            } else{
+                callbackErro('Erro ao recuperar os dados')
+            }
+        }
+        
+
+        var callbackSucesso = function(titulo, descricao, paragrafo,imagem,soma){
+            document.write('<h1>'+ titulo+ '</h1>')
+            
+            document.write('<hr/>')
+            document.write('<p>'+ descricao+ '</p>')
+            document.write('<hr/>')  
+            document.write('<h1>'+ paragrafo+ '</h1>')
+              
+            document.write('<hr/>')  
+            document.write('<h1>'+imagem+'</h1>')
+            document.write('<hr/>')  
+            document.write('<h1>'+soma+'</h1>')
+            document.write('<img src="WhatsApp Image 2021-10-29 at 13.56.32.jpeg">')
+        }
+
+        var callbackErro= function(erro){
+            document.write('<p><b>Erro:</b>'+ erro+ '</h1>')
+
+        }
+        exibirArtigo(1,callbackSucesso,callbackErro)
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
