@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <style>
+            .quadrado{
+                transition: all .3s ease-in-out ;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="Digite um caracter aqui"  onkeyup="distribuiCaracter()" id="entrada" />
+        
+        <hr/>
+        <span>Letras:</span>
+        <input  class="quadrado" type="text"  id="letras">
+
+        <span>Números:</span>
+        <input  class="quadrado" type="text"  id="numeros">
+        
+
+        <script>    
+            function distribuiCaracter(){
+
+              //selecionar o valor digitado  
+              var caracter = document.getElementById('entrada').value;
+              
+              //limpar o campo de digitação
+              document.getElementById('entrada').value = '';
+
+              //limpar espaços em branco nas extremidades da string
+              caracter.trim();
+              
+              switch(caracter){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    //adicionar o caracter no campo referente a numeros
+                    // let -> ela é uma variavel limitada ao escopo (neste caso o switch)
+                    let imputNumero = document.getElementById('numeros'); 
+                    imputNumero.value += caracter
+                
+                    imputNumero.style =" background: #70df7059"
+                    setTimeout(()=>{
+                        imputNumero.style =" background: white"
+                    },1000)
+                    tamanhos('500px',1)
+               
+                    break;
+
+
+
+                default:
+                    //adicionar o caracter no campo referente a letras
+                    let imputLetra = document.getElementById('letras');
+                    imputLetra.value += caracter
+
+                    imputLetra.style = "background: #ff828270"
+                    setTimeout(()=>{
+                        imputLetra.style= " bacground: white"
+                    },1000)
+                    tamanhos('500px',2)
+                   
+              }
+
+            }
+            function tamanhos(tamanho,pos){
+                 document.getElementsByClassName('quadrado')[pos].style.width = tamanho;
+            }
+        </script>
+       
+
+    </body>
+</html>

@@ -5,16 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JavaScript</title>
-        <script>    
+        <style>
+            #quadrado{
+                transition: all .3s ease-in-out ;
+            }
+        </style>
            
-        </script>   
     </head>
     <body>
+        <div ondblclick="modificaEstilo('rgb(240, 248, 255)')">
+            <h3>Manipulando estilo</h3> 
 
-      <h3>Manipulando estilo</h3> 
+            <button type="button" onclick="modificaEstilo('#FF0000','400px')"> Vermelho</button>
+            <button type="button" onclick="modificaEstilo('#00FF00','600px')"> Verde</button>
+            <button type="button" onclick="modificaEstilo('#0000FF','1000px')"> Azul</button>
+            <hr/>
+            <div  onmouseover="modificaEstilo('corDeFundo','300px')" onmouseleave="modificaEstilo('corDeFundo','100px')"  style = "border: solid black; width: 100px ;height: 100px; " id="quadrado"></div>
+        </div>
+        
 
-        <button></button>
-
-
+        <script>
+            
+            function modificaEstilo(corDeFundo,tam){
+                 document.getElementById('quadrado').style.backgroundColor = corDeFundo;
+                 document.getElementById('quadrado').style.width = tam;
+                                 
+            } 
+         </script>
     </body>
 </html>
