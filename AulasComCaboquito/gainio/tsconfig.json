@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {//São regras para compilar o TS
+    "target": "es5",//definido qual o ecmascript do projeto.
+    "lib": ["dom", "dom.iterable", "esnext"],// as libs referentes a execução do projeto
+    "allowJs": true,//é deficinido se permite JS no meio do codigo.
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",//define se exite relação entre modulos (define o modelo de import padrão)
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",//tec.
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],//são lidos todos os projetos que tenham essas extenções.
+  "exclude": ["node_modules"]// NÃO são lidos.
+}

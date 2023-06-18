@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tela de Login</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    let loginValido = false;
+    let userData = Array();
+    userData[0] = "teste";
+
+
+    while (loginValido === false) {
+        let user = prompt('Digite seu Login:');
+        console.log(userData)
+        if (user === 'Jofre') {
+
+            alert('Login valido')
+            // localStorage.setItem(userData[0], user)
+            // console.log(localStorage.userData)
+
+            let senha = prompt('Digite sua Senha:');
+
+            if (senha === '123') {
+
+                alert('Senha valida')
+                loginValido = true;
+
+            } else {
+
+                alert('Senha invalida, tente novamente')
+            }
+        } else {
+
+            alert('Login inválido, tente novamente')
+
+        }
+    }
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array em laços de Repetição</title>
+    <script>
+        /*
+        
+         var listaFuncionarios = Array()
+  
+          listaFuncionarios[0] = 'aaaaa'
+          listaFuncionarios[1] = 'bbbbb'
+          listaFuncionarios[2] = 'ccccc'
+          listaFuncionarios[3] = 'ddddd'
+          listaFuncionarios[4] = 'eeeee'
+  
+          var f = function (a, b) {
+              console.log(a, b)
+          }
+  
+          listaFuncionarios.forEach(f);
+         */
+        /* 1#  Baseado no exemplo da aula "Praticando um pouco - Percorrendo e listando itens de Arrays", implemente a mesma solução, porém utilizando o comando for.*/
+
+        // var listaCompras = Array();
+        // listaCompras[0] = 'cu do mudo'
+        // listaCompras[1] = 'uva'
+        // listaCompras[2] = 'maça'
+        // listaCompras[3] = 'pera'
+        // listaCompras[4] = 'arroz'
+
+        // for (var i = 0; i < listaCompras.length; i++) {
+        //     document.write(listaCompras[i]);
+        //     console.log(listaCompras[i]);
+        // }
+
+        /* 2#  Baseado no exemplo da aula "Praticando um pouco - Criando uma tabuada de 1 a 10 (laços encadeados)", implemente a mesma solução, porém utilizando o comando while.*/
+        var tabuada = Array();
+        var x = 1;
+        var y = 1;
+
+        while (x <= 10) {
+            y = 1;
+            tabuada[x] = Array()
+            while (y <= 10) {
+
+                // console.log(x + ' x ' + y + ' = ' + x * y);
+                document.write(x + ' x ' + y + ' = ' + x * y);
+                tabuada[x][y] = x * y;
+
+
+                y++;
+            }
+
+            console.log("\n");
+            document.write("<hr/>");
+            x++;
+
+        }
+        console.log(tabuada)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
